@@ -1,0 +1,33 @@
+# ---------------------------------------------------
+#    Name: FATIMA REHMATULLAH
+#    ID: 1631703
+#    CMPUT 274, Fall  2020
+#    Weekly Assignment#2: UnfairDice
+# --------------------------------------------------
+
+   Files included:
+1) unfairDice.py
+2) README
+
+   Notes: 
+
+The file validator.py contains two functions: "biased_rolls" and "draw_histogram". 
+
+*  The biased_roll function generates a random number each time a roll is needed. It then checks the random number against the probability boundaries to deduce which of the intervals does the number lie in. On finding a corresponding interval, it appends the "rolls" list with the corresponding (index+1) value which is the dice face rolled in that roll. The process continues for all the rolls requested.
+
+*  The histogram function takes in the list of roll as an argument along with an integer value for width and number of faces of the dice. Using the rolls list, the histogram function calculates the number of times each of the faces were rolled and stores it in a seperate list. It then uses that list to scale all the frequencies by using the largest frequency as a base. It then prints a "#" (one each for the freuqnecy density) and then prints "-" in the remaining space up until the width.
+
+
+  Assumptions:
+The program assumes that:
+* the biased die will always have atleast 2 sides, so len(prob_list)>=2.
+* the sum of all probabilities in the probability list will always equal 1 and the no. of elements in the prob_list will be equal to the number of sides of the dice
+* The m-sides of the dice are always given as integer numbers corresponding to index+1 values of the prob_list.
+* probabilities will be passed as float
+* the width given as an argument in the second function will be the basis of scaling for the rest of the frequencies
+* the list rolls will always contain integer values starting from 0 up until the number of faces of the dice.
+
+  Running Instructions:
+
+* Open a terminal window and run python3
+* Import the validator file in the terminal using the command "from unfairDice import *" and use the "biased_rolls(prob_list,s,n)" or "draw_histogram(m,rolls,width)" command in the terminal to see the functions work. 
